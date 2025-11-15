@@ -1,0 +1,150 @@
+{
+  "exemplo_estrutura_dados": {
+    "como_usar": "Copie esta estrutura e preencha com os dados de cada boss",
+    "formato": {
+      "Boss Name": {
+        "url": "URL da página do boss no site do TheFifthMatt",
+        "spawns": {
+          "Nome do Spawn Point": [
+            "lista",
+            "de",
+            "números",
+            "de",
+            "seeds"
+          ]
+        },
+        "nightData": {
+          "night1Circles": [
+            "Lista de círculos/áreas onde a noite 1 fecha"
+          ],
+          "night2Circles": [
+            "Lista de círculos/áreas onde a noite 2 fecha"
+          ]
+        }
+      }
+    }
+  },
+  
+  "exemplo_gladius_completo": {
+    "Gladius": {
+      "url": "https://thefifthmatt.github.io/nightreign/gladius/",
+      "spawns": {
+        "Far Southwest": [8, 10, 13, 14, 26],
+        "Stormhill South of Gate": [2, 12, 22, 34],
+        "Above Stormhill Tunnel Entrance": [1, 6, 18, 35],
+        "West of Warmaster's Shack": [19, 28, 29, 31],
+        "Southeast of Lake": [4, 21, 25],
+        "East of Cavalry Bridge": [0, 5, 9, 27, 37, 39],
+        "Minor Erdtree": [7, 11, 38],
+        "Below Summonwater Hawk": [3, 17, 20, 23, 24, 30, 32, 33],
+        "Northeast of Saintsbridge": [15, 16, 36]
+      },
+      "nightData": {
+        "night1Circles": [
+          "West Stormhill Graveyard",
+          "Northwest Corner",
+          "Southwest Corner",
+          "Northeast Corner",
+          "East of Saintsbridge",
+          "South Lake",
+          "Northwest Mistwood Pond",
+          "Northwest Lake",
+          "Southwest Mistwood",
+          "Northeast of Lake"
+        ],
+        "night2Circles": [
+          "Northeast Corner",
+          "West Stormhill Graveyard",
+          "Southwest Corner",
+          "Northwest Corner",
+          "Northwest Mistwood Pond",
+          "South Lake",
+          "Northwest Lake",
+          "Southwest Mistwood",
+          "Northeast of Lake",
+          "Southeast Mountaintop",
+          "North of Crater",
+          "Noklateo Entrance",
+          "Southeast Rotted Woods"
+        ]
+      }
+    }
+  },
+
+  "template_boss_vazio": {
+    "NOME_DO_BOSS": {
+      "url": "https://thefifthmatt.github.io/nightreign/NOME_DO_BOSS/",
+      "spawns": {
+        "Spawn Point 1": [],
+        "Spawn Point 2": [],
+        "Spawn Point 3": []
+      },
+      "nightData": {
+        "night1Circles": [],
+        "night2Circles": []
+      }
+    }
+  },
+
+  "guia_preenchimento": {
+    "passo_1": "Acesse a URL do boss: https://thefifthmatt.github.io/nightreign/[boss_name]/",
+    "passo_2": "Identifique os spawn points na página (geralmente são títulos de seções)",
+    "passo_3": "Para cada spawn, liste os números das seeds disponíveis (000-039)",
+    "passo_4": "Acesse a planilha oficial para pegar informações de night1Circles e night2Circles",
+    "passo_5": "Cole os dados no formato JSON acima",
+    "passo_6": "Converta para JavaScript e adicione no código do app"
+  },
+
+  "exemplo_conversao_para_javascript": {
+    "passo_1": "Copie o JSON do boss",
+    "passo_2": "Cole no objeto bossData do aplicativo",
+    "exemplo_codigo": "const bossData = {\n  'Gladius': {\n    url: 'https://...',\n    spawns: {...},\n    nightData: {...}\n  },\n  'Adel': {...}\n}"
+  },
+
+  "seeds_por_boss": {
+    "nota": "Cada boss tem exatamente 40 seeds numeradas de 000 a 039",
+    "total_seeds": 40,
+    "numeracao": "000, 001, 002, ..., 037, 038, 039",
+    "url_pattern": "https://thefifthmatt.github.io/nightreign/[boss]/[seed].html"
+  },
+
+  "exemplo_urls_seeds": {
+    "gladius_seed_000": "https://thefifthmatt.github.io/nightreign/gladius/000.html",
+    "gladius_seed_001": "https://thefifthmatt.github.io/nightreign/gladius/001.html",
+    "adel_seed_000": "https://thefifthmatt.github.io/nightreign/adel/000.html",
+    "formato": "https://thefifthmatt.github.io/nightreign/[boss_minusculo]/[seed_3_digitos].html"
+  },
+
+  "dicas_importantes": {
+    "1": "Sempre use números (não strings) para as seeds no array",
+    "2": "Mantenha a ordem alfabética dos spawn points para facilitar navegação",
+    "3": "Verifique se todos os 40 seeds estão distribuídos entre os spawns",
+    "4": "Use os nomes exatos dos spawns como aparecem no site oficial",
+    "5": "Para nightData, copie os círculos exatamente como na planilha",
+    "6": "Teste cada boss após adicionar os dados para verificar se está funcionando"
+  },
+
+  "checklist_verificacao": {
+    "url_boss": "✓ URL do boss está correta?",
+    "total_seeds": "✓ Total de 40 seeds distribuídas entre todos os spawns?",
+    "spawns_nomes": "✓ Nomes dos spawns correspondem ao site oficial?",
+    "night1": "✓ Círculos da Noite 1 preenchidos?",
+    "night2": "✓ Círculos da Noite 2 preenchidos?",
+    "sem_duplicatas": "✓ Nenhuma seed duplicada?",
+    "seeds_ordenadas": "✓ Seeds em ordem crescente em cada spawn?",
+    "teste_app": "✓ Testou no aplicativo após adicionar?"
+  },
+
+  "fontes_dados": {
+    "site_principal": "https://thefifthmatt.github.io/nightreign/",
+    "planilha_oficial": "https://docs.google.com/spreadsheets/d/1qZX3MfipvtPbKwPjElyx9Rler4RXLd9CPrOv7c2XOWI",
+    "boss_gladius": "https://thefifthmatt.github.io/nightreign/gladius/",
+    "boss_adel": "https://thefifthmatt.github.io/nightreign/adel/",
+    "boss_gnoster": "https://thefifthmatt.github.io/nightreign/gnoster/",
+    "boss_maris": "https://thefifthmatt.github.io/nightreign/maris/",
+    "boss_libra": "https://thefifthmatt.github.io/nightreign/libra/",
+    "boss_fulghor": "https://thefifthmatt.github.io/nightreign/fulghor/",
+    "boss_caligo": "https://thefifthmatt.github.io/nightreign/caligo/",
+    "boss_heolstor": "https://thefifthmatt.github.io/nightreign/heolstor/"
+  }
+}
